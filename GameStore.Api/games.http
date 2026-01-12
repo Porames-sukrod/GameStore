@@ -1,0 +1,17 @@
+GET http://localhost:5255/games
+
+###
+GET http://localhost:5255/games/1
+
+###
+POST http://localhost:5255/games
+Content-Type: application/json
+
+{
+    "name": "Fifa 24",
+    "genre": "Sports",
+    "price": 59.99,
+    "releaseDate": "2023-10-01"
+}
+
+
