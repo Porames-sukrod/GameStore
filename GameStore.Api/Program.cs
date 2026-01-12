@@ -37,7 +37,7 @@ app.MapGet("/games/{id}", (int id) => games.Find(game => game.Id == id))
  .WithName(GetGameEndopointName);
 
 //post /games
-app.MapPost("/games" , (createDameDto newGame) =>
+app.MapPost("/games", (CreateGameDto newGame) =>
 {
     GameDto game = new (
         games.Count + 1,
@@ -45,9 +45,30 @@ app.MapPost("/games" , (createDameDto newGame) =>
         newGame.Genre,
         newGame.Price,
         newGame.ReleaseDate
-        );
+    );
     games.Add(game);
     return Results.CreatedAtRoute(GetGameEndopointName, new { id = game.Id }, game);
 });
+
+//put /games
+app.MapPut("/games/{id}", (int id, UpdateGameDto updatedGame) =>
+{
+    var gameIndex = games.FindIndex(game => game.Id == id);
+
+    if (gameIndex == -1) 
+    {
+        return Results.NotFound(); // ถ้าหาไม่เจอ ให้บอกว่าไม่พบ (404)
+    }
+
+    games[gameIndex] = new GameDto(
+        id,
+        updatedGame.Name,
+        updatedGame.Genre,
+        updatedGame.Price,
+        updatedGame.ReleaseDate
+    );
+    return Results.NoContent();
+});
+
 
 app.Run();

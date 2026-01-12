@@ -8,10 +8,20 @@ POST http://localhost:5255/games
 Content-Type: application/json
 
 {
-    "name": "Fifa 24",
+    "name": "Mlbb",
     "genre": "Sports",
-    "price": 59.99,
+    "price": 19.99,
     "releaseDate": "2023-10-01"
 }
 
 
+###
+PUT http://localhost:5255/games/1
+Content-Type: application/json
+
+{
+    "name": "Rov",
+    "genre": "Moba",
+    "price": 0.00,
+    "releaseDate": "2024-01-01"
+}
