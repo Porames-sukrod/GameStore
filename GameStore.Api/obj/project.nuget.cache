@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ZaSL6FekrPo=",
+  "dgSpecHash": "ZzNo+M+enUQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\INNO-Dev05\\Desktop\\Tast\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\INNO-Dev05\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\INNO-Dev05\\.nuget\\packages\\minimalapis.extensions\\0.11.0\\minimalapis.extensions.0.11.0.nupkg.sha512",
+    "C:\\Users\\INNO-Dev05\\.nuget\\packages\\minivalidation\\0.8.0\\minivalidation.0.8.0.nupkg.sha512"
+  ],
   "logs": []
 }

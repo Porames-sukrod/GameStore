@@ -8,7 +8,7 @@ POST http://localhost:5255/games
 Content-Type: application/json
 
 {
-    "name": "Mlbb",
+     
     "genre": "Sports",
     "price": 19.99,
     "releaseDate": "2023-10-01"
@@ -16,12 +16,15 @@ Content-Type: application/json
 
 
 ###
-PUT http://localhost:5255/games/1
+PUT http://localhost:5255/games/2
 Content-Type: application/json
 
 {
-    "name": "Rov",
+
     "genre": "Moba",
-    "price": 0.00,
+    "price": 1.25,
     "releaseDate": "2024-01-01"
 }
+
+###
+DELETE http://localhost:5255/games/3
