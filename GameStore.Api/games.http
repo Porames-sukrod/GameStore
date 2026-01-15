@@ -8,23 +8,22 @@ POST http://localhost:5255/games
 Content-Type: application/json
 
 {
-     
-    "genre": "Sports",
+    "name" : "FIFA 24",
+    "genreId": 1,
     "price": 19.99,
     "releaseDate": "2023-10-01"
 }
 
-
 ###
-PUT http://localhost:5255/games/2
+PUT http://localhost:5255/games/1
 Content-Type: application/json
 
 {
-
-    "genre": "Moba",
-    "price": 1.25,
+    "name": "FIFA 25",
+    "genreId": 5,
+    "price": 29.99,
     "releaseDate": "2024-01-01"
 }
 
 ###
-DELETE http://localhost:5255/games/3
+DELETE http://localhost:5255/games/1
