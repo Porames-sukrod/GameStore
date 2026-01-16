@@ -1,16 +1,16 @@
 GET http://localhost:5255/games
 
 ###
-GET http://localhost:5255/games/1
+GET http://localhost:5255/games
 
 ###
-POST http://localhost:5255/games
+POST http://localhost:5255/games/2
 Content-Type: application/json
 
 {
-    "name" : "FIFA 24",
-    "genreId": 1,
-    "price": 19.99,
+    "name" : "Mlbb",
+    "genreId": 2,
+    "price": 19.00,
     "releaseDate": "2023-10-01"
 }
 
